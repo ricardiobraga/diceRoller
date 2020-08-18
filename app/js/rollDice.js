@@ -51,19 +51,14 @@ function roll(qtt) {
             somaTotal += resultArray[i];
             resultTotal.textContent = 'total: ' + somaTotal;
             resultContent.textContent += ' ' + resultArray[i];
-
-
-
     }
-
-
-
 }
 
 function selectDice(dice) {
-
     if (dice.value == 'D6') {
         return { min: 1, max: 6 };
 
     }
+
+    
 }
