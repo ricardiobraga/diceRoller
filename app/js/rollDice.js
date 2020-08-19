@@ -1,10 +1,12 @@
-// selecionar dado
-// quantidade de dados
-// criar dados virtuais
-// rolar
+//criar função de rolagem para todos os dados
+//renderizar resultados
+
 
 let divElement = document.querySelector('#app');
 let divResult = document.querySelector('#result');
+
+let contentApp = document.querySelector('.contentApp')
+let content = document.querySelector('.content')
 
 let result = document.querySelector('#app .result');
 let dices = document.querySelector('#app .dices');
@@ -23,9 +25,30 @@ divResult.appendChild(resultTotal);
 
 
 
-
+let btnAdd = document.querySelector('.add');
 
 let btn = document.querySelector('#app .btn');
+
+
+btnAdd.onclick = function () {
+
+
+
+    //clonar node
+    let cloneDice = contentApp.cloneNode(true);
+    divElement.appendChild(cloneDice)
+    
+    let divArray = document.querySelectorAll('.contentApp')
+    if (divArray.length == 5){
+        divArray.delete
+    }
+    
+    //filtrar dados disponíveis
+    //carregar imagem do dado referente
+    
+    
+
+}
 
 
 btn.onclick = function () {

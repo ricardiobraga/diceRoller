@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+}
+
+.header {
+    display: flex;
+
+    
+    
+    justify-content: flex-end;
+
+    
+
+    /* padding: 10px; */
+
+    background: rgb(54, 55, 75);
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: solid 3px rgb(32, 33, 44); ;
+    grid-area: header;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-left: solid 2px rgb(32, 33, 44);
+
+    padding: 15px 0px 15px 15px;
+}
+
+.btn {    
+
+    
+    margin-right: 15px;
+    padding: 7px;
+    height: 23px;
+    
+    
+    background: rgb(240, 88, 113);
+
+    cursor: pointer;
+
+    
+    
+
+    border-radius: 5px;
+
+    font-size: 1em;
+    font-weight: 700;
+    color: rgb(55, 47, 58)
+}
+
+.add {    
+    /* align-self: center; */
+
+    /* margin: 5px 10px; */
+    padding: 7px;
+    height: 23px;
+
+    background: rgb(240, 88, 113);
+    
+
+    border-radius: 5px;
+
+    font-size: 1em;
+    font-weight: 700;
+    color: rgb(55, 47, 58);
+    cursor: pointer;
+}
+
+
+.contentDices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content {
+    grid-area: content;
+
+    display: flex;    
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+
+    padding: 0px 15px;
+
+    background: rgb(77, 78, 102);  
+}
+
+.contentApp {
+    
+    display: flex;   
+   
+    
+    
+    margin: 10px 0px;
+    
+    
+}
+
+.diceImg {
+    
+    background: rgb(219, 110, 132);
+    width: 20px;
+    height: 20px;
+       
+    
+}
+
+.dices {
+    margin: 0px 10px;
+}
+
+.quantity {
+    width: 50px;
+    border-radius: 5px;
+    margin: 0px 10px;
+    
+}
+
+
+
+.resultDiv {
+    background: rgb(41, 42, 54);
+    display: flex;    
+    justify-content: center; 
+    align-items: center;
+    
+
+    height: 30px;
+    width:  100%;
+
+    border-radius: 10px 10px 0px 0px; 
+
+    
+
+   
+}
+
+.resultContent {
+    color: rgb(32, 33, 44);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0px 10px;
+
+    color: blanchedalmond;
+    
+}
+
+.resultContent span{
+    color: rgb(32, 33, 44);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0px 10px;
+    color: blanchedalmond;
+}
+
+.resultTotal {
+    color: rgb(32, 33, 44);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0px 10px;
+    color: blanchedalmond;
+}
+
+.resultTotal span{
+    color: rgb(32, 33, 44);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0px 10px;
+    color: blanchedalmond;
+}
+
+.footer {    
+    grid-area: footer;
+
+    background: rgb(54, 55, 75);
+    border-radius: 0px 0px 10px 10px;
+    border-bottom: solid 3px rgb(32, 33, 44);
+    border-top: solid 3px rgb(32, 33, 44);
+
+    font-size: 13px;
+    text-align: right;
+    color: rgb(200, 133, 255);
+    padding: 8px;
+    
+}
+
+.footer a {
+
+    text-decoration: none;
+    color: rgb(240, 88, 113);
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 100px;
+    background-color: rgb(26, 30, 32);    
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 50vh;
+    grid-template-rows: 60px 1fr 40px;
+    grid-template-areas: 
+        'header'
+        'content'
+        'footer';
+
+        
+}
+
