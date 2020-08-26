@@ -25,6 +25,9 @@
     align-items: center;
     border-left: solid 2px rgb(32, 33, 44);
 
+    
+    
+
     padding: 15px 0px 15px 15px;
 }
 
@@ -35,6 +38,7 @@
     padding: 7px;
     height: 23px;
     
+   
     
     background: rgb(240, 88, 113);
 
@@ -50,12 +54,13 @@
     color: rgb(55, 47, 58)
 }
 
-.add {    
+.addAndRemove {    
     /* align-self: center; */
 
     /* margin: 5px 10px; */
     padding: 7px;
     height: 23px;
+    margin-right: 10px;
 
     background: rgb(240, 88, 113);
     
@@ -66,13 +71,7 @@
     font-weight: 700;
     color: rgb(55, 47, 58);
     cursor: pointer;
-}
 
-
-.contentDices {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .content {
@@ -80,24 +79,36 @@
 
     display: flex;    
     align-content: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap; 
 
-    padding: 0px 15px;
+    padding: 0px 0px;
 
     background: rgb(77, 78, 102);  
 }
 
-.contentApp {
-    
-    display: flex;   
-   
-    
-    
-    margin: 10px 0px;
+
+.contentDices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+
     
     
 }
+
+
+
+.contentApp {    
+    display: flex;     
+    margin: 15px 0px;
+
+    
+    
+    
+}
+
+
 
 .diceImg {
     
@@ -109,13 +120,26 @@
 }
 
 .dices {
+    border: none;
+    outline: none;
+
     margin: 0px 10px;
+    border-radius: 5px;
+
+    background: rgb(54, 55, 75);
+    color: cornsilk;
 }
 
 .quantity {
     width: 50px;
     border-radius: 5px;
-    margin: 0px 10px;
+    margin: 0px 0px;
+
+    border: none;
+    outline: none;
+
+    background: rgb(54, 55, 75);
+    color: cornsilk;
     
 }
 

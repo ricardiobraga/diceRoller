@@ -1,5 +1,7 @@
 //criar função de rolagem para todos os dados
 //renderizar resultados
+//animar botoes
+//desenhar dados
 
 
 let divElement = document.querySelector('#app');
@@ -25,30 +27,54 @@ divResult.appendChild(resultTotal);
 
 
 
-let btnAdd = document.querySelector('.add');
+let btnAdd = document.querySelector('[addDice]');
+let btnRemove = document.querySelector('[removeDice]');
 
 let btn = document.querySelector('#app .btn');
 
 
 btnAdd.onclick = function () {
 
-
-
-    //clonar node
-    let cloneDice = contentApp.cloneNode(true);
-    divElement.appendChild(cloneDice)
     
+
     let divArray = document.querySelectorAll('.contentApp')
-    if (divArray.length == 5){
-        divArray.delete
-    }
-    
-    //filtrar dados disponíveis
-    //carregar imagem do dado referente
-    
-    
+    let newArray = Array.from(divArray)
 
+    if (newArray.length < 5) {
+        //clonar node
+        let cloneDice = contentApp.cloneNode(true);
+        divElement.appendChild(cloneDice)      
+
+
+    }
+
+    newArray.nodeList
+    console.log(newArray);
 }
+
+//filtrar dados disponíveis
+//carregar imagem do dado referente
+
+btnRemove.onclick = function () {   
+
+    let divPai = document.querySelector('.contentDices')
+    let divFilho = divPai.lastChild
+    let divArray = document.querySelectorAll('.contentApp')
+    let newArray = Array.from(divArray)    
+
+    if (newArray.length >1) {
+        //excluir dado node
+        divPai.removeChild(divFilho)     
+
+    }
+
+   
+    console.log(divPai);
+}
+
+
+
+
 
 
 btn.onclick = function () {
@@ -71,9 +97,9 @@ function roll(qtt) {
         let rollResult = RollDice(selectDice(dices));
         resultArray[i] = rollResult;
 
-            somaTotal += resultArray[i];
-            resultTotal.textContent = 'total: ' + somaTotal;
-            resultContent.textContent += ' ' + resultArray[i];
+        somaTotal += resultArray[i];
+        resultTotal.textContent = 'total: ' + somaTotal;
+        resultContent.textContent += ' ' + resultArray[i];
     }
 }
 
@@ -83,5 +109,5 @@ function selectDice(dice) {
 
     }
 
-    
+
 }
