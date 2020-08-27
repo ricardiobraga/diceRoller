@@ -14,22 +14,24 @@
     </header>
     <main class="content">
 
-        <div id="app" class="contentDices">
-            <div class="contentApp">
+        <div id="app" class="contentDices" >
+            <div class="contentApp" diceCopys>
                 <div class="diceImg"></div>
-                <select class="dices">
+                <select class="dices"dices>
                     <option class="d4">D4</option>
                     <option class="d6">D6</option>
-                    <option class="d8">D8</option>
-                    <option class="d10">D10</option>
+                    <option class="d8" >D8</option>
+                    <option class="d10" >D10</option>
                     <option class="d12">D12</option>
+                    <option class="d20">D20</option>
                 </select>
                 <input class="quantity" type="number" min="1" max="10" placeholder="qt">
-            </div>
+            </div>            
+            
         </div>
 
         <div class="btns">
-            <a class="btn">roll</a>
+            <a class="btn" btnRoll>roll</a>
             <a class="addAndRemove" addDice>+</a>
             <a class="addAndRemove" removeDice>-</a>
         </div>
@@ -37,12 +39,12 @@
 
 
         <div id="result" class="resultDiv">
-            <p class="resultContent"><span>rolagens:</span> 3</p>
-            <p class="resultTotal"> <span>total:</span>50</p>
+            <p class="resultContent" ><span>rolagens:</span> <span rollsField>3</span> </p>
+            <p class="resultTotal"> <span>total:</span> <span totalField>50</span> </p>
         </div>
     </main>
     <footer class="footer">
-        <p class="unholyTag">coded by <a href="http://www.instagram.com.br/unholypixels" target="_blank">@unholypixels</a></span> </p>
+        <p class="unholyTag">created by <a href="http://www.instagram.com.br/unholypixels" target="_blank">@unholypixels</a></span> </p>
     </footer>
 
 
