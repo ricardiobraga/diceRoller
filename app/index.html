@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="/app/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
@@ -10,46 +10,51 @@
 
 <body>
     <header class="header">
-      
+
     </header>
     <main class="content">
 
-        <div id="app" class="contentDices" >
+        <div id="app" class="contentDices">
             <div class="contentApp" diceCopys>
                 <div class="diceImg"></div>
-                <select class="dices"dices>
-                    <option class="d4">D4</option>
-                    <option class="d6">D6</option>
-                    <option class="d8" >D8</option>
-                    <option class="d10" >D10</option>
-                    <option class="d12">D12</option>
-                    <option class="d20">D20</option>
+                <select class="dices" dices>
+                    <option class="d4" diceValue="4">D4</option>
+                    <option class="d6" diceValue="6">D6</option>
+                    <option class="d8" diceValue="8">D8</option>
+                    <option class="d10" diceValue="10">D10</option>
+                    <option class="d12" diceValue="12">D12</option>
+                    <option class="d20" diceValue="20">D20</option>
                 </select>
-                <input class="quantity" type="number" min="1" max="10" placeholder="qt">
-            </div>            
-            
+                <input class="quantity" value="1" type="number" min="1" max="10" placeholder="qt">
+            </div>
+
+
         </div>
 
         <div class="btns">
-            <a class="btn" btnRoll>roll</a>
-            <a class="addAndRemove" addDice>+</a>
-            <a class="addAndRemove" removeDice>-</a>
+            <a class="btnRoll" btnRoll>roll</a>
+            <a class="addAndRemove" btnAdd>+</a>
+            <a class="addAndRemove" btnRemove>-</a>
         </div>
 
 
 
         <div id="result" class="resultDiv">
-            <p class="resultContent" ><span>rolagens:</span> <span rollsField>3</span> </p>
-            <p class="resultTotal"> <span>total:</span> <span totalField>50</span> </p>
+            <p class="resultContent"><span>Rolls:</span>
+            <p class="rolls" rollsField> </p> </p>
+            <p class="resultTotal"> <span>Total:</span>
+            <p class="resultValue" totalField> </p>
+            </p>
         </div>
     </main>
     <footer class="footer">
-        <p class="unholyTag">created by <a href="http://www.instagram.com.br/unholypixels" target="_blank">@unholypixels</a></span> </p>
+        <p class="unholyTag">created by <a href="http://www.instagram.com.br/unholypixels"
+                target="_blank">@unholypixels</a></span> </p>
     </footer>
 
 
 
-    <script src='/app/js/rollDice.js'></script>
+    <script src='/js/script.js'></script>
 </body>
 
 </html>

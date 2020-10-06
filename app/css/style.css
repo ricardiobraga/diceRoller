@@ -31,27 +31,28 @@
     padding: 15px 0px 15px 15px;
 }
 
-.btn {    
+.btnRoll {    
 
     
     margin-right: 15px;
     padding: 7px;
-    height: 23px;
-    
-   
+    height: 23px; 
     
     background: rgb(240, 88, 113);
 
     cursor: pointer;
 
-    
-    
-
     border-radius: 5px;
 
     font-size: 1em;
     font-weight: 700;
-    color: rgb(55, 47, 58)
+    color: rgb(55, 47, 58);
+
+    transition: 0.3s;
+}
+
+.btnRoll:hover{
+    background: rgb(158, 60, 76);
 }
 
 .addAndRemove {    
@@ -152,13 +153,15 @@
 
 .resultDiv {
     background: rgb(41, 42, 54);
-    display: flex;    
+    display: block;    
     justify-content: center; 
     align-items: center;
+    text-align: center;
     
 
-    height: 30px;
+    height: 50%;
     width:  90%;
+    padding: 10px 0;
 
     border-radius: 10px 10px 0px 0px; 
 
@@ -170,35 +173,44 @@
 .resultContent {
     color: rgb(32, 33, 44);
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 700;
     margin: 0px 10px;
 
-    color: blanchedalmond;
+    color: rgb(219, 110, 132);
     
 }
 
-.resultContent span{
+.rolls{
     color: rgb(32, 33, 44);
     font-size: 1rem;
-    font-weight: 400;
-    margin: 0px 10px;
+    font-weight: 300;
+    margin: 10px 10px ;
     color: blanchedalmond;
+}
+
+.rolls span{
+    color: rgb(133, 140, 212);
+    font-weight: 500;
+
 }
 
 .resultTotal {
     color: rgb(32, 33, 44);
     font-size: 1rem;
-    font-weight: 400;
-    margin: 0px 10px;
-    color: blanchedalmond;
+    font-weight: 700;    
+    color: rgb(219, 110, 132);
+    padding: 10px 0px 0px 0px;
+    border-top: solid 3px rgb(32, 33, 44);
 }
 
-.resultTotal span{
-    color: rgb(32, 33, 44);
+
+
+.resultValue{    
     font-size: 1rem;
     font-weight: 400;
-    margin: 0px 10px;
+    margin: 0px 10px 0pc 10px;
     color: blanchedalmond;
+    
 }
 
 .footer {    

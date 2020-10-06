@@ -18,19 +18,29 @@ let contentApp = document.querySelector('.contentApp')
 let content = document.querySelector('.content')
 
 let result = document.querySelector('#app .result');
-let dices = document.querySelector('.dices');
-let quantity = document.querySelector('#app .quantity');
+let dices = contentApp.querySelector('.dices');
+let quantity = contentApp.querySelector('.quantity');
 
-let resultContent = document.createElement('p');
-let resultTotal = document.createElement('p');
+let diceValue = document.querySelector('[diceValue]')
+
+
+
+
+console.log('dice: ', dices.selected);
+
+console.log(diceValue.getAttribute("diceValue"));
+console.log('seleced:', dices.selectedIndex)
+
+// let resultContent = document.createElement('p');
+// let resultTotal = document.createElement('p');
 
 
 
 let resultArray = [];
 let somaTotal = 0;
 
-divResult.appendChild(resultContent);
-divResult.appendChild(resultTotal);
+// divResult.appendChild(resultContent);
+// divResult.appendChild(resultTotal);
 
 let btnAdd = document.querySelector('[addDice]');
 let btnRemove = document.querySelector('[removeDice]');
@@ -40,9 +50,17 @@ let btnRoll = document.querySelector('[btnRoll]');
 //array com conjunto de dados
 let divArray = document.querySelectorAll('.contentApp')
 let newArray = Array.from(divArray)
+console.log('newArray: ',newArray);
+
+
+
+
+
+
 
 
 btnAdd.onclick = function () {
+
 
     if (newArray.length < 6) {
 
@@ -74,11 +92,11 @@ btnRemove.onclick = function () {
 
 
 btnRoll.onclick = function () {
-    resultArray = [];
+
+
     somaTotal = 0;
-    resultContent.textContent = ' ';
     roll(quantity.value);
-    console.log('qtt: ' + quantity.value);
+    
 }
 
 function createArray(elemento) {
@@ -97,33 +115,57 @@ function diceIdentifier(diceCopys) {
 }
 
 
-function RollDice({ min = 1, max = 6 }) {
-    const dice = Math.random() * (max - min) + min;
-    return Math.floor(dice);
-}
-
-function roll(qtt) {
-    let rollsField = document.querySelector('[rollsField]')
-    let totalField = document.querySelector('[totalField]')
-
+function RollDice(qtt, { min = 1, max = 6 }) {
     for (i = 1; i <= qtt; i++) {
-        let rollResult = RollDice(selectDice(dices));
-        resultArray[i] = rollResult;
-
-        somaTotal += resultArray[i];
-        resultTotal.textContent = 'total: ' + somaTotal;
-        resultContent.textContent += ' ' + resultArray[i];
-
-        rollsField.innerHTML += ' ';
-        totalField.innerHTML = resultArray[i];
+        const dice = Math.random() * (max - min) + min;
+        return Math.floor(dice);
     }
 }
 
-function selectDice(dice) {
+function roll() {
+    
+    // let rollsField = document.querySelector('[rollsField]')
+    // let totalField = document.querySelector('[totalField]')
+    let qqt = quantity.value
+    
+
+    newArray.forEach(e => {               
+        // RollDice(qtt, diceIdentifier(e))
+        let dice = e.querySelector('.dices')
+        let diceValue = e.querySelector('[diceValue]')
+
+        let diceArray = Array.from(dice)
+
+      
+        
+        console.log('here: ', e);
+        console.log('seleced:', dice.selectedIndex)
+        console.log('value:', diceValue.getAttribute("diceValue"))
+
+    })
+    
+    
+    // for (i = 1; i <= qtt; i++) {
+    //     let rollResult = RollDice(selectDice(dices));
+    //     resultArray[i] = rollResult;
+
+    //     somaTotal += resultArray[i];
+    //     totalField = somaTotal;
+    //     resultContent.textContent += ' ' + resultArray[i];
+
+    //     rollsField.innerHTML += ' ';
+    //     totalField.innerHTML = resultArray[i];
+    // }
+}
+
+function selectDice() {
+   if (dice.value == 'D4')
+    
     if (dice.value == 'D6') {
         return { min: 1, max: 6 };
 
     }
+
 
 
 }
