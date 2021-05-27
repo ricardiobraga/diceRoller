@@ -93,7 +93,6 @@ btnRemove.onclick = function () {
 
 btnRoll.onclick = function () {
 
-
     somaTotal = 0;
     roll(quantity.value);
     

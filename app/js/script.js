@@ -58,12 +58,15 @@ btnRemove.onclick = function () {
 
 function addDice() {
 
+    
+
     contentAppArray = document.querySelectorAll('.contentApp');
     
     if (contentAppArray.length < 6) {
 
         let copyDice = contentApp.cloneNode(true)
         contentDices.append(copyDice)
+        copyDice.querySelector('.quantity').value = 1
 
     }
     diceIdentifier(contentAppArray);
@@ -98,6 +101,12 @@ function resultRoll() {
         let qtt = parseInt(e.querySelector('.quantity').value);
         let diceValue = e.querySelectorAll('option');
         let valorDoDado = 0;
+
+        if(qtt > 10){
+            alert("O valor máximo de dados é 10")
+            qtt = 0
+           quantity.value = 1
+        }
 
 
         // verifica o valor do dado s,elecionado e atribui a variável valorDoDado
@@ -163,10 +172,13 @@ function diceIdentifier(diceCopys) {
 
     if (n > 6) { n = 6 }
 
+    
+
     return diceArray[n -1].selected = true
+    
 }
 
-console.log(contentAppArray);
+
 
 
 
